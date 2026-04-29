@@ -17,7 +17,7 @@ function App() {
 
   // Submit data
   const handleSubmit = async () => {
-    await axios.post("http://10.179.40.143:5000/add", {
+    await axios.post("https://medical-project-5.onrender.com", {
       name,
       medicines: list
     });
@@ -28,7 +28,7 @@ function App() {
 
   // Fetch data
   const fetchData = async () => {
-    const res = await axios.get("http://10.179.40.143:5000/all");
+    const res = await axios.get("https://medical-project-5.onrender.com");
     setPeople(res.data);
   };
 
