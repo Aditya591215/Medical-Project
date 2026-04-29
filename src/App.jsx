@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+const BASE_URL="https://medical-project-6.onrender.com"
 
 function App() {
   const [name, setName] = useState("");
@@ -28,8 +29,10 @@ function App() {
 
   // Fetch data
   const fetchData = async () => {
+    try{
     const res = await axios.get("https://medical-project-6.onrender.com/all");
-    setPeople(res.data);
+    setPeople(res.data);}catch(err){
+      console.error(err)}
   };
 
   useEffect(() => {
