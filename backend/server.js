@@ -41,6 +41,10 @@ app.get("/all", async (req, res) => {
   res.json(data);
 });
 
+app.get("/",(req,res)=>{
+  res.send("API is running");
+});
+
 // Start server
 const PORT = process.env.PORT || 5000;
 
