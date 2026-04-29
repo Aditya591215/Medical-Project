@@ -18,7 +18,7 @@ function App() {
 
   // Submit data
   const handleSubmit = async () => {
-    await axios.post("https://medical-project-7.onrender.com/add", {
+    await axios.post("https://medical-project-6.onrender.com/add", {
       name,
       medicines: list
     });
@@ -30,7 +30,7 @@ function App() {
   // Fetch data
   const fetchData = async () => {
     try{
-    const res = await axios.get("https://medical-project-7.onrender.com/all");
+    const res = await axios.get("https://medical-project-6.onrender.com/all");
     setPeople(res.data);}catch(err){
       console.error(err)}
   };
